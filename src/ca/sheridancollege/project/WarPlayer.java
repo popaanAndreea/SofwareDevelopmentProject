@@ -1,4 +1,3 @@
-
 package ca.sheridancollege.project;
 
 import ca.sheridancollege.project.card.WarPile;
@@ -15,6 +14,10 @@ public class WarPlayer extends Player {
         super(name);
     }
     
+    public WarPile getWarPile() {
+        return warPile;
+    }
+    
     public void setWarPile(WarPile warPile) {
         this.warPile = warPile;
     }
@@ -22,6 +25,16 @@ public class WarPlayer extends Player {
     @Override
     public void play() {
         
+    }
+    
+    @Override 
+    public String toString() {
+        return getPlayerID();
+    }
+    
+    public String displayNumCardsLeft() {
+        String format = "%s has %d cards left";
+        return String.format(format, getPlayerID(), warPile.getPileSize());
     }
 
 }

@@ -1,4 +1,3 @@
-
 package ca.sheridancollege.project.card;
 
 import static ca.sheridancollege.project.card.WarCard.SUITS;
@@ -42,21 +41,9 @@ public class DeckOfWarCards extends GroupOfCards {
         // remove these cards form the deck
         ArrayList<WarCard> subList = new ArrayList<>();
         while (numCards > 0) {
-            subList.add(deck.remove(numCards));
+            subList.add(deck.remove(numCards - 1));
             numCards--;
         }
         return subList;
     }
-    
-//    public static void main(String[] args) {
-//        System.out.println("testing...");
-//        DeckOfWarCards deckOfCards = new DeckOfWarCards();
-//        for (WarCard card: deckOfCards.getDeck()) {
-//            System.out.println(card);
-//        }
-//        System.out.println(deckOfCards.getDeck().size());
-//        ArrayList<WarCard> subList = deckOfCards.giveOutCards(13);
-//        System.out.println(subList.size());
-//        System.out.println(deckOfCards.getDeck().size());
-//    }
 }

@@ -1,6 +1,5 @@
 package ca.sheridancollege.project;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -10,35 +9,41 @@ import java.util.Scanner;
 public class GameController {
 
     public static void main(String[] args) {
-        
+
         Scanner input = new Scanner(System.in);
         System.out.println("Welcome to War!\n\n");
-        int numPlayers = 0;
-        while (numPlayers > 4 || numPlayers < 2) {
-            System.out.print("Between 2 and 4 players can play, how many are playing? : ");
-            numPlayers = input.nextInt();
-        }
-        input.nextLine(); // eat extra newline 
-        System.out.println();
-        
-        // create an empty array of WarPlayers, populate it with players based
-        // on given names
-        ArrayList<WarPlayer> warPlayers = new ArrayList<>();
-        for (int i=1; i <= numPlayers; i++) {
-            System.out.print("Enter a name for player " + i + " : ");
-            String name = input.nextLine();
-            warPlayers.add(new WarPlayer(name));
-        }
-        
+        int numPlayers = 2;
+
+        // create 2 WarPlayers
+        System.out.print("Enter a name for player 1: ");
+        String name = input.nextLine();
+        WarPlayer player1 = new WarPlayer(name);
+        System.out.print("Enter a name for player 2: ");
+        name = input.nextLine();
+        WarPlayer player2 = new WarPlayer(name);
+
         // ask how many turns the game will be
         System.out.print("\nHow many turns will the game last? : ");
         int numTurns = input.nextInt();
+
+        input.nextLine(); // eat the newline from last use of scanner
         
         // create a WarGame with given numTurns and warPlayers
-        WarGame warGame = new WarGame(numTurns, warPlayers);
-        
-        
-        
-        
+        WarGame warGame = new WarGame(numTurns, player1, player2);
+        System.out.println("\nGame is Starting!\n");
+        while (warGame.canPlay()) {
+            System.out.println("Turn " + warGame.getTurnNum() + " is starting.");
+            System.out.println(warGame.getPlayer1().displayNumCardsLeft());
+            System.out.println(warGame.getPlayer2().displayNumCardsLeft());
+            System.out.println("Press enter to start:");
+            input.nextLine();
+            System.out.println();
+            warGame.play();
+            System.out.println();
+        }
+        warGame.declareWinner();
+
+        // thank the user for playing
+        System.out.println("\n Thanks For Playing our Game!");
     }
 }
