@@ -1,7 +1,7 @@
 
-package ca.sheridancollege.project;
+package ca.sheridancollege.project.card;
 
-import static ca.sheridancollege.project.WarCard.SUITS;
+import static ca.sheridancollege.project.card.WarCard.SUITS;
 import java.util.ArrayList;
 import java.util.Collections;
 

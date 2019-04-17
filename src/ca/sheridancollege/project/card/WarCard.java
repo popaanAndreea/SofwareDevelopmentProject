@@ -1,6 +1,6 @@
-package ca.sheridancollege.project;
+package ca.sheridancollege.project.card;
 
-import ca.sheridancollege.project.Card;
+import ca.sheridancollege.project.card.Card;
 
 /**
  *
