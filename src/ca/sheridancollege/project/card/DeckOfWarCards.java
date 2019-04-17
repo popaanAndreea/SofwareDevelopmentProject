@@ -3,8 +3,6 @@ package ca.sheridancollege.project.card;
 
 import static ca.sheridancollege.project.card.WarCard.SUITS;
 import java.util.ArrayList;
-import java.util.Collections;
-
 /**
  *
  * @author fernandofedele

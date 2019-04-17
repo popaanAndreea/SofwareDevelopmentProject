@@ -19,11 +19,20 @@ public class WarGame extends Game {
 
     @Override
     public void play() {
-        
+        int turnsLeft = numTurns;
+        while (turnsLeft > 0) {
+            playTurn();
+            turnsLeft--;
+        }
+        declareWinner();
     }
 
     @Override
     public void declareWinner() {
+        
+    }
+    
+    public void playTurn() {
         
     }
 }
