@@ -1,7 +1,7 @@
 package ca.sheridancollege.project.card;
 
 /**
- *
+ * A class that models individual cards for the game of war
  * @author fernandofedele
  */
 public class WarCard extends Card {

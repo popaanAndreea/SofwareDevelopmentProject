@@ -3,7 +3,7 @@ package ca.sheridancollege.project;
 import ca.sheridancollege.project.card.WarPile;
 
 /**
- *
+ * A class that models a player of the card game War
  * @author fernandofedele
  */
 public class WarPlayer extends Player {

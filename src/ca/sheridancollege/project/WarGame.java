@@ -6,7 +6,7 @@ import ca.sheridancollege.project.card.WarPile;
 import java.util.ArrayList;
 
 /**
- *
+ * A class that models a game of the card game War
  * @author fernandofedele
  */
 public class WarGame extends Game {

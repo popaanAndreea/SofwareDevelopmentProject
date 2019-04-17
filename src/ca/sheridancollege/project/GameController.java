@@ -3,7 +3,8 @@ package ca.sheridancollege.project;
 import java.util.Scanner;
 
 /**
- *
+ * A class that takes in user input to create a specific game of war and lets
+ * a user play the game to completion.
  * @author fernandofedele
  */
 public class GameController {
