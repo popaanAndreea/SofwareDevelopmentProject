@@ -11,9 +11,9 @@ public class WarPile extends GroupOfCards {
     private ArrayList<WarCard> warPile;
     private int pileSize;
     
-    public WarPile(int numPlayers, ArrayList<WarCard> warCards) {
-        super(52 / numPlayers);
-        this.pileSize = 52 / numPlayers;
+    public WarPile(ArrayList<WarCard> warCards) {
+        super(warCards.size());
+        pileSize = warCards.size();
         warPile = warCards;
     }
     
