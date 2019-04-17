@@ -30,7 +30,15 @@ public class GameController {
             warPlayers.add(new WarPlayer(name));
         }
         
-        System.out.println(warPlayers);
+        // ask how many turns the game will be
+        System.out.print("\nHow many turns will the game last? : ");
+        int numTurns = input.nextInt();
+        
+        // create a WarGame with given numTurns and warPlayers
+        WarGame warGame = new WarGame(numTurns, warPlayers);
+        
+        
+        
         
     }
 }

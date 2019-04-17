@@ -1,7 +1,5 @@
 package ca.sheridancollege.project.card;
 
-import ca.sheridancollege.project.card.Card;
-
 /**
  *
  * @author fernandofedele
