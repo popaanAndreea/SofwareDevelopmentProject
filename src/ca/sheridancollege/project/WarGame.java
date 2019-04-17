@@ -1,5 +1,5 @@
 
-package ca.sheridancollege.project.game;
+package ca.sheridancollege.project;
 
 /**
  *

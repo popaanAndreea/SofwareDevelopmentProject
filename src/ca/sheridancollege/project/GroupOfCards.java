@@ -5,6 +5,7 @@
  */
 package ca.sheridancollege.project;
 
+import ca.sheridancollege.project.Card;
 import java.util.ArrayList;
 import java.util.Collections;
 
