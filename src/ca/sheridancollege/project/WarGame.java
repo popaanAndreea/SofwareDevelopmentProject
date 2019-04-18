@@ -6,7 +6,7 @@ import ca.sheridancollege.project.card.WarPile;
 import java.util.ArrayList;
 
 /**
- *
+ * A class that models a game of the card game War
  * @author fernandofedele
  */
 public class WarGame extends Game {
@@ -40,8 +40,8 @@ public class WarGame extends Game {
         
         // create an arrayList containing all the character's top cards
         ArrayList<WarCard> fightingCards = new ArrayList<>();
-        fightingCards.add(player1.getWarPile().takeTopCard());
-        fightingCards.add(player2.getWarPile().takeTopCard());
+        fightingCards.add(player1.play());
+        fightingCards.add(player2.play());
         
         // get cards we just picked
         WarCard card1 = fightingCards.get(0);
@@ -117,22 +117,22 @@ public class WarGame extends Game {
     }
 
     @Override
-    public void declareWinner() {
+    public WarPlayer declareWinner() {
         if (player1.getWarPile().getPileSize() > player2.getWarPile().getPileSize()) {
-            System.out.println(player1 + " wins! Congratulations!");
+            return player1;
         } else if (player1.getWarPile().getPileSize() < player2.getWarPile().getPileSize()) {
-            System.out.println(player2 + " wins! Congratulations!");
+            return player2;
         } 
         // player 1 and player 2 tie
         else {
-            System.out.println(player1 + " and " + player2 + " tie.");
+            return null;
         }
     }
     
     // returns true if the game can and should continue
     public boolean canPlay() {
         boolean canPlay = true;
-        if (numTurns <= turnNum) {
+        if (numTurns < turnNum) {
             canPlay = false;
         } else if (player1.getWarPile().getPileSize() == 0) {
             canPlay = false;

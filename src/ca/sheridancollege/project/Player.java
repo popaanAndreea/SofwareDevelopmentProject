@@ -5,6 +5,8 @@
  */
 package ca.sheridancollege.project;
 
+import ca.sheridancollege.project.card.Card;
+
 /**
  * A class that models each Player in the game. Players have an identifier, which should be unique.
  * @author dancye, 2018
@@ -42,7 +44,8 @@ public abstract class Player
     /**
      * The method to be instantiated when you subclass the Player class
      * with your specific type of Player and filled in with logic to play your game.
+     * @return Card
      */
-    public abstract void play();
+    public abstract Card play();
     
 }

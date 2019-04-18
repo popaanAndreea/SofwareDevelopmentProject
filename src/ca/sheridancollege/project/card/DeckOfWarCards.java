@@ -4,7 +4,7 @@ import static ca.sheridancollege.project.card.WarCard.SUITS;
 import java.util.ArrayList;
 import java.util.Collections;
 /**
- *
+ * Models a shuffled deck of cards made of WarCards to be used in a game of War
  * @author fernandofedele
  */
 public class DeckOfWarCards extends GroupOfCards {

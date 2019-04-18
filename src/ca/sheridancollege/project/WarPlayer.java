@@ -1,9 +1,10 @@
 package ca.sheridancollege.project;
 
+import ca.sheridancollege.project.card.WarCard;
 import ca.sheridancollege.project.card.WarPile;
 
 /**
- *
+ * A class that models a player of the card game War
  * @author fernandofedele
  */
 public class WarPlayer extends Player {
@@ -22,11 +23,6 @@ public class WarPlayer extends Player {
         this.warPile = warPile;
     }
     
-    @Override
-    public void play() {
-        
-    }
-    
     @Override 
     public String toString() {
         return getPlayerID();
@@ -35,6 +31,15 @@ public class WarPlayer extends Player {
     public String displayNumCardsLeft() {
         String format = "%s has %d cards left";
         return String.format(format, getPlayerID(), warPile.getPileSize());
+    }
+    
+    public WarCard showTopCard() {
+        return warPile.showTopCard();
+    }
+
+    @Override
+    public WarCard play() {
+        return warPile.takeTopCard();
     }
 
 }

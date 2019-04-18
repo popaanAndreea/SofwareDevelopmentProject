@@ -3,7 +3,8 @@ package ca.sheridancollege.project.card;
 import java.util.ArrayList;
 
 /**
- *
+ * A class that models a players pile of cards that they would use in a game of
+ * the card game War
  * @author fernandofedele
  */
 public class WarPile extends GroupOfCards {
@@ -18,6 +19,11 @@ public class WarPile extends GroupOfCards {
     public int getPileSize() {
         return warPile.size();
     }
+    
+    public WarCard showTopCard() {
+        return warPile.get(0);
+    }
+    
     
     public WarCard takeTopCard() {
         // takes the card at the first position, removes it from the pile 
