@@ -36,15 +36,22 @@ public class GameController {
             System.out.println("Turn " + warGame.getTurnNum() + " is starting.");
             System.out.println(warGame.getPlayer1().displayNumCardsLeft());
             System.out.println(warGame.getPlayer2().displayNumCardsLeft());
-            System.out.println("Press enter to start:");
+            System.out.println("Press enter to play:");
             input.nextLine();
             System.out.println();
             warGame.play();
             System.out.println();
         }
-        warGame.declareWinner();
+        WarPlayer winner = warGame.declareWinner();
 
+        if (winner == null) {
+            System.out.println(player1.getPlayerID() + " and " + player2.getPlayerID() + " have tied.");;
+        } else if (player1.equals(winner)) {
+            System.out.println(player1.getPlayerID() + " has won the game. Congratulations!");
+        } else {
+            System.out.println(player2.getPlayerID() + " has won the game. Congratulations!");
+        }
         // thank the user for playing
-        System.out.println("\n Thanks For Playing our Game!");
+        System.out.println("\nThanks For Playing our Game!");
     }
 }

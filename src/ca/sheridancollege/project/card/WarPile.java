@@ -20,6 +20,11 @@ public class WarPile extends GroupOfCards {
         return warPile.size();
     }
     
+    public WarCard showTopCard() {
+        return warPile.get(0);
+    }
+    
+    
     public WarCard takeTopCard() {
         // takes the card at the first position, removes it from the pile 
         // and returns it. Will shift all other WarCards one index left
